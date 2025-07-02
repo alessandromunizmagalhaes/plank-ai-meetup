@@ -1,0 +1,26 @@
+{
+  "name": "ai-tech-talk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/**/*.js",
+    "start": "npm run build && node dist/src/mcp-server.js",
+    "start-inspector": "export DANGEROUSLY_OMIT_AUTH=true && export MCP_SERVER_REQUEST_TIMEOUT=10000000 && npm run build && npx @modelcontextprotocol/inspector node dist/src/mcp-server.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.13.1",
+    "openai": "^4.104.0",
+    "pg": "^8.16.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.33",
+    "@types/pg": "^8.15.4",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}

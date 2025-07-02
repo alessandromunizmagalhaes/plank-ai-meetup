@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "typescript-mcp": {
+      "command": "node",
+      "args": [
+        "/Users/andre/dev/plank/meetup/ai-tech-talk/typescript-mcp/dist/src/mcp-server.js"
+      ]
+    }
+  }
+}
