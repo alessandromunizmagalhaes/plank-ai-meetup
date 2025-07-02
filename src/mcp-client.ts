@@ -3,7 +3,7 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 
 
 let client: Client | undefined = undefined
-const baseUrl = new URL("https://near-fcd7fhpiti34.devingtools.com/1234567/mcp");
+const baseUrl = new URL("http://localhost:3000/1234567/mcp");
 
 async function run() {
     try {
