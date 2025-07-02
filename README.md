@@ -62,6 +62,13 @@ This will run the MCP Inspector, a test interface to call the tools, resources, 
 npm run start-inspector
 ```
 
+For windows machines use:
+
+```bash
+npm run start-inspector:win
+```
+
+
 1.3. **Access the MCP Inspector endpoint**
 
 This link will open the MCP Inspector, a tool to help test the tools we will create during our meetup session. After opening it, you should:
