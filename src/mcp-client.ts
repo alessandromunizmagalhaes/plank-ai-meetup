@@ -3,7 +3,7 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 
 
 let client: Client | undefined = undefined
-const baseUrl = new URL("http://localhost:3000/1234567/mcp");
+const baseUrl = new URL("http://localhost:3000/mcp");
 
 async function run() {
     try {
@@ -21,9 +21,9 @@ async function run() {
         setInterval(async () => {
             console.log("Session ID:", transport.sessionId);
             const response = await client?.callTool({
-                name: 'convert-meters-to-feet',
+                name: 'health-check',
                 arguments: {
-                    meters: 100
+                    test_string: "Hello World"
                 }
             });
             console.log(response);

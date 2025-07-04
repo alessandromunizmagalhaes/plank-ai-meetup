@@ -1,8 +1,12 @@
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
+import express from "express";
 import { z } from "zod";
 import { generateEmbeddings } from "./providers/open-ai.js";
 import { Client } from "pg";
+import { randomUUID } from "crypto";
+import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 // Create an MCP server
 const server = new McpServer({
   name: "Demo",
@@ -48,5 +52,6 @@ export const runMcpServer = async () => {
 }
 
 
-
 runMcpServer();
+
+// runMcpServerStreamable();
